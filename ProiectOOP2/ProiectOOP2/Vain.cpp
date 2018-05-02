@@ -49,6 +49,23 @@ void Vain::afisare(ostream& out) {
 	}
 }
 
+bool Vain::checkPossibility(bool is) {
+	if (!isCold && is) {
+		return false;
+	}
+	else {
+		if (capacCurr > capacitate) return false;
+		else if (volCurr > volum) return false;
+		return true;
+	}
+}
+
+int Vain::getDistance(directions d1, directions d2) {
+	int distA = abs(d1.x - d2.x);
+	int distB = abs(d1.y - d2.y);
+	return distA + distB;
+}
+
 Vain::~Vain()
 {
 }

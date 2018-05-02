@@ -41,6 +41,22 @@ void Scooter::afisare(ostream& out) {
 	out << static_cast<Vehicle&>(*this);
 }
 
+bool Scooter::checkPossibility(bool is) {
+	if (capacCurr > capacitate)
+		return false;
+	else if (volum < volCurr)
+		return false;
+	return true;
+}
+
+int Scooter::getDistance(directions d1, directions d2) {
+	int distA = d1.x - d2.x;
+	distA *= distA;
+	int distB = d1.y - d2.y;
+	distB *= distB;
+	return (int)sqrt(distA + distB);
+}
+
 Scooter::~Scooter()
 {
 }

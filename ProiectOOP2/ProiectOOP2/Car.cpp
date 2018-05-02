@@ -41,6 +41,21 @@ void Car::afisare(ostream& out) {
 	out << static_cast<Vehicle&>(*this);
 }
 
+
+bool Car::checkPossibility(bool is) {
+	if (capacCurr > capacitate)
+		return false;
+	else if (volum < volCurr)
+		return false;
+	return true;
+}
+
+int Car::getDistance(directions d1, directions d2) {
+	int distA = abs(d1.x - d2.x);
+	int distB = abs(d1.y - d2.y);
+	return distA + distB;
+}
+
 Car::~Car()
 {
 }
