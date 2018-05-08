@@ -8,6 +8,8 @@
 #include "Vain.h"
 #include <vector>
 #include "Driver.h"
+#include <time.h>
+
 
 using namespace std;
 
@@ -34,8 +36,12 @@ public:
 	}
 	//Station(int );
 	int lessWeight();
-	int onTime();
+	int getNumber(int *);
+	int onTime(int, int);
+	int onInterval(int, int, int);
+	int kindaFast(int, int);
 	int mostCloser(int *) ;
+	bool checkRejection(int );
 	void getOrders(istream&);
 	friend istream& operator>>(istream&, Station&);
 	friend ostream& operator<<(ostream&, const Station&);

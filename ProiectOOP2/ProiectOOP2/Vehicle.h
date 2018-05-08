@@ -33,6 +33,9 @@ public:
 	int getCapacity() {
 		return capacCurr;
 	}
+	int getSpeed() {
+		return speed;
+	}
 	void downgrade(int, int);
 	void updatePosition(int, int);
 	virtual bool checkPossibility(bool) = 0;

@@ -1,2 +1,4 @@
 ﻿  Station.cpp
+c:\users\john\desktop\proiectoop2\proiectoop2\proiectoop2\station.cpp(134): warning C4101: 'number': unreferenced local variable
+c:\users\john\desktop\proiectoop2\proiectoop2\proiectoop2\station.cpp(248): warning C4715: 'Station::getNumber': not all control paths return a value
   ProiectOOP2.vcxproj -> C:\Users\John\Desktop\ProiectOOP2\ProiectOOP2\Debug\ProiectOOP2.exe
