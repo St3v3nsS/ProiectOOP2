@@ -52,8 +52,12 @@ P& Driver::operator[](int pos) {
 	return client[pos];
 }
 
-P* Driver::fistInfirstOut() {
-	return client;
+void Driver::fistInfirstOut(Vehicle *car) {
+	if (!rejected)
+	{
+		car->updatePosition(client[1].first.y, client[1].second.y);
+		CurrState = 0;
+	}
 }
 
 void Driver::computeDistance(Vehicle* masina) {
@@ -89,7 +93,7 @@ void Driver::computeTime(Vehicle* masina) {
 	//cout << '\n';
 }
 
-P Driver::closer() {
+void Driver::closer(Vehicle *car) {
 	int min = INF, pos = 0;
 	for (int i = 1; i <= sizeC; i++)
 		if (distances[i].first < min) {
@@ -102,12 +106,15 @@ P Driver::closer() {
 	
 		livrate[pos].second = 1;
 	}
-	return client[pos];
-	
+	//cout << pos << " ";
+	if (!rejected) {
+		car->updatePosition(client[pos].second.x, client[pos].second.y);
+		CurrState = 0;
+	}
 	
 }
 
-P Driver::priority() {
+void Driver::priority(Vehicle* car) {
 	int min = INF, pos = 0;
 	for (int i = 1; i <= sizeC; i++)
 	{
@@ -116,7 +123,27 @@ P Driver::priority() {
 			pos = i;
 		}
 	}
-	return client[pos];
+	//cout << pos << " " ;
+	if (!rejected) {
+		car->updatePosition(client[pos].second.x, client[pos].second.y);
+		CurrState = 0;
+	}
+}
+
+void Driver::getRandomNumber(Vehicle* car) {
+	int number = rand() % 3 + 1;
+	switch (number)
+	{
+	case 1:
+		fistInfirstOut(car);
+		break;	
+	case 2:
+		closer(car);
+		break;
+	case 3:
+		priority(car);
+		break;
+	}
 }
 
 Driver::~Driver()

@@ -19,13 +19,13 @@ using namespace std;
 class Station
 {
 	
-	Vehicle **arr;
+	vector <Vehicle*> arr;
 	Driver *soferi;
 	int sizeN;
 	static int countOrders;
 	static int time;
 public:
-	friend class Driver;
+	//friend class Driver;
 	Station();
 	Station(int );
 	int getCountOrders() {
@@ -42,7 +42,8 @@ public:
 	int kindaFast(int, int);
 	int mostCloser(int *) ;
 	bool checkRejection(int );
-	void getOrders(istream&);
+	void getOrders(istream&, ostream& );
+	void addVehicle(int, bool, directions, int, int);
 	friend istream& operator>>(istream&, Station&);
 	friend ostream& operator<<(ostream&, const Station&);
 	~Station();

@@ -41,8 +41,8 @@ public:
 	void setSizeC(int x) {
 		sizeC = x;
 	}
-	P* fistInfirstOut();
-	P closer();
+	void fistInfirstOut(Vehicle *);
+	void closer(Vehicle *);
 	int getTime(int pos) {
 		return timp[pos];
 	}
@@ -54,10 +54,8 @@ public:
 	}
 	void computeDistance(Vehicle*);
 	void computeTime(Vehicle*);
-	P priority();
-	int outDist() {
-		return distances[1].first;
-	}
+	void priority(Vehicle* );
+	void getRandomNumber(Vehicle *);
 	~Driver();
 };
 
