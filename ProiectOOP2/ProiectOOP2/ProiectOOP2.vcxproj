@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="Car.h" />
     <ClInclude Include="Driver.h" />
+    <ClInclude Include="JoKerException.hpp" />
     <ClInclude Include="Scooter.h" />
     <ClInclude Include="Station.h" />
     <ClInclude Include="stdafx.h" />

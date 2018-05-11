@@ -36,6 +36,9 @@ public:
 	int getSpeed() {
 		return speed;
 	}
+	int getVolume() {
+		return volCurr;
+	}
 	void downgrade(int, int);
 	void updatePosition(int, int);
 	virtual bool checkPossibility(bool) = 0;

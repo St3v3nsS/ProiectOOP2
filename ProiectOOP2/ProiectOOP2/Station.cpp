@@ -135,7 +135,7 @@ void Station::getOrders(istream& in, ostream& out) {
 		}
 		else {
 
-			int position, number;
+			int position = 0, number;
 			in >> timeType;
 			switch (timeType) {
 			case 1:

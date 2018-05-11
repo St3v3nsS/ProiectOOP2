@@ -42,11 +42,12 @@ void Vain::afisare(ostream& out) {
 	out << "Acest obiect este o Duba\n";
 	out << static_cast<Vehicle&>(*this);
 	if (isCold == 1) {
-		out << "Este o duba frigorifica\n";
+		out << "Este o duba frigorifica\n\n";
 	}
 	else {
-		out << "Nu este o duba frigorifica\n";
+		out << "Nu este o duba frigorifica\n\n";
 	}
+	
 }
 
 bool Vain::checkPossibility(bool is) {

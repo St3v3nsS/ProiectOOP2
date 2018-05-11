@@ -38,7 +38,8 @@ istream& operator>>(istream& in, Scooter& obj) {
 
 void Scooter::afisare(ostream& out) {
 	out << "Acest obiect este un Scuter\n";
-	out << static_cast<Vehicle&>(*this);
+	out << static_cast<Vehicle&>(*this) << '\n';
+
 }
 
 bool Scooter::checkPossibility(bool is) {

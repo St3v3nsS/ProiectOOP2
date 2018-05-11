@@ -52,6 +52,9 @@ public:
 	bool getCurrState() {
 		return CurrState;
 	}
+	int getSizec() {
+		return sizeC;
+	}
 	void computeDistance(Vehicle*);
 	void computeTime(Vehicle*);
 	void priority(Vehicle* );

@@ -38,7 +38,7 @@ istream& operator>>(istream& in, Car& obj) {
 
 void Car::afisare(ostream& out) {
 	out << "Acest obiect este o Masina\n";
-	out << static_cast<Vehicle&>(*this);
+	out << static_cast<Vehicle&>(*this) << '\n';
 }
 
 

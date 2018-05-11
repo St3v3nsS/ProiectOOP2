@@ -1,3 +1,9 @@
-﻿  ProiectOOP2.cpp
-c:\users\john\desktop\proiectoop2\proiectoop2\proiectoop2\proiectoop2.cpp(19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+﻿  Car.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Vain.cpp
+  Station.cpp
+  Scooter.cpp
+  ProiectOOP2.cpp
+  Driver.cpp
   ProiectOOP2.vcxproj -> C:\Users\John\Desktop\ProiectOOP2\ProiectOOP2\Debug\ProiectOOP2.exe
