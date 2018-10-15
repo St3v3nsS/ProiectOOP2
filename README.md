@@ -9,6 +9,7 @@ This project summarizes a delivery firm by entering some car details like capaci
 `ProiectOOP2.cpp` is the main part of the program and contains the user interface and the interactive menu from which you can choose to add a car, to enter the coordinates of a order and so on.
 
 `JoKerException.hpp` is an inherited exception class for my custom exceptions.
-The others .cpp and .h are the class used in the program.
+
+The others .cpp and .h are the classes used in the program.
 
 
